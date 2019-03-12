@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script
+            src="http://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div>
+    <form method="GET" action="/greeting">
+        <input name="say">
+        <input name="to">
+        <button>SUBMIT</button>
+    </form>
+</div>
+
+<div>
+    <input id="say" placeholder="인사말">
+    <input id="to" placeholder="대상자">
+    <button onclick="send()">SUBMIT</button>
+</div>
+<script>
+    function send() {
+        let say = $('#say').val()
+        let to = $('#to').val()
+        window.location.href = `greeting1/${say}/${to}`
+    }
+</script>
+</body>
+</html>
